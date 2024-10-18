@@ -1,5 +1,7 @@
 import sys
 
+print("hello world")
+
 
 def get_numbers(line):
     return [num for num in line if num.isnumeric()]
