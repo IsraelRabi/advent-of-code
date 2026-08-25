@@ -51,9 +51,11 @@ def calibration_values(line):
         return int(numbers[0] * 2)
     return int(numbers[0] + numbers[-1])
 
-with open("input-day1.txt", 'r') as file:
-    sum_of_numbers = 0
-    for line in file:
-        sum_of_numbers += calibration_values(line)
-    print(sum_of_numbers)
-
+sum_of_numbers = 0
+while True:
+    try:
+        entry = input()
+        sum_of_numbers += calibration_values(entry)
+    except EOFError:
+        break
+print(sum_of_numbers)
